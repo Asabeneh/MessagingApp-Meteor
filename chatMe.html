@@ -1,0 +1,43 @@
+<head>
+    <title> ChatMe</title>
+</head>
+
+<body>
+
+    <header class="jumbotron">
+        <h1>Welcome to ChatMe</h1>
+        {{#unless currentUser}}
+        <span class="morefeature">
+          Sign Up for more features </span>
+          {{/unless}}
+        </header>
+    {{> messages}}
+
+</body>
+<template name="messages">
+  {{>loginButtons align = "right"}}
+  <ul>
+    {{#each messages}}
+    {{> message}}
+    {{/each}}
+  </ul>
+  <form>
+    <textarea rows = "1" cols = "100">Type message ...</textarea>
+  </form>
+</template>
+<template name="message">
+  <li id = {{_id}}>
+    <img src = "{{user.profile}}"/>
+    <div class = "message-header">
+  <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
+ <h4>{{user}} </h4>
+ <span class = "time"> {{time}}</span>
+  </div>
+  <div class = "message-content">
+    <span class = "message">  {{message}}</span>
+    {{#if showDelete}}
+<i class="fa fa-trash-o" aria-hidden="true"></i>
+    {{/if}}
+  </div>
+  </li>
+</template>

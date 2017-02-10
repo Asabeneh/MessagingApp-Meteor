@@ -1,0 +1,32 @@
+.fa-user-circle{
+  color:lightgreen;
+  margin-right:0.4%;
+}
+h4{
+  display: inline-block;;
+}
+.message{
+  margin-left:2%;
+}
+.fa-trash-o{
+  float:right;
+  color:red;
+}
+h1{
+  text-align: center;
+}
+.fa-trash-o:hover{
+  cursor:pointer;
+}
+
+
+.jumbotron{
+  background: lightgreen;
+}
+.morefeature{
+margin-left: 50%;
+font-weight:bolder;
+}
+form{
+  margin-bottom: 1%;
+}
